@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dis{
+            background-color: lightblue;
+            height: 500px;
+            border: 3px solid black;
+            font-size: large;
+            font-weight: 300;
+            text-align: center;
+            padding-top: 22px;
+        }
+        button{
+            background-color: pink;
+            height: 33px;
+            width: 55px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display File</h1>
+    <button onclick="dis()">submit</button>
+    <p id="dis"></p>
+
+
+</body>
+<script>
+    function dis(){
+        var values = [],
+        keys = Object.keys(localStorage)
+        var dis=document.getElementById("dis");
+        n = keys.length;
+        // console.log(i)
+        var output=""
+        for(i=0;i<n;i++){
+            console.log(keys[i]+" = "+localStorage.getItem(keys[i]))
+            output+=keys[i]+" = "+localStorage.getItem(keys[i]);
+            output+="<br>"
+
+
+        }
+        dis.innerHTML=output;
+
+        // console.log(keys[0]+" = "+localStorage.getItem(keys[0]))
+        // console.log(keys[1]+" = "+localStorage.getItem(keys[1]))
+        // console.log(keys[2]+" = "+localStorage.getItem(keys[2]))
+
+       
+ 
+    
+    }
+</script>
+</html>
